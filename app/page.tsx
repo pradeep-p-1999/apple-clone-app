@@ -1,8 +1,30 @@
 import Image from "next/image";
+import { User } from "./interfaces/index";
 
 export default function Home() {
+
+  //typed User modal
+  const user: User = {
+    name: "Pradeep",
+    age: 25,
+    gender: "male",
+  };
+
+  // function
+  function returnGender():string{
+    return user.gender
+  }
+
+  //function without type
+  function identity<X>(value:X):X{
+    return value
+  }
+
+  //identiy - local function
+  const product = identity<string>("MSI sword");
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div className="font-sans grid bg-gray-200 grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -12,6 +34,7 @@ export default function Home() {
           height={38}
           priority
         />
+        <div className="">{user.name} : {returnGender()} : { product }</div>
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
