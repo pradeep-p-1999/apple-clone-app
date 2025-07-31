@@ -10,7 +10,7 @@ export default function TopBar() {
 
   if (showAltNav) {
     return (
-      <nav className="bg-[#f5f5f7] border-b border-gray-300 w-full  sticky top-0 z-50">
+      <nav className="bg-[#f5f5f7] border-b border-gray-300 w-full  fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto px-4 flex justify-center items-center h-12">
           <ul className="flex space-x-8 text-gray-800 text-sm font-medium items-center">
             <li>
@@ -26,7 +26,7 @@ export default function TopBar() {
   }
 
   return (
-    <nav className="bg-[#f5f5f7] border-b border-gray-300 w-full   sticky top-0 z-50">
+    <nav className="bg-[#f5f5f7] border-b border-gray-300 w-full  fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 flex justify-center items-center h-12">
         <ul className="flex space-x-8 text-gray-800 text-sm font-medium items-center">
           <li>
