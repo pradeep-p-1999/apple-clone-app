@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { navItems } from "../data/navItems";
-import Container from "../components/layout/Container";
+import Container from "../components/layout/ComponentsContainer";
 
 export default function CategoryPage({ params }: { params: { category: string } }) {
 

@@ -18,3 +18,7 @@ export interface iExploreCard{
   buyLink: string;
   colors: string[];
 }
+
+export interface iFloatingNav{
+    
+}
